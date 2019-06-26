@@ -15,7 +15,6 @@ const methodOverride = require('method-override');
 const seeds = require('./seeds');
 // const seedPosts = require('./seeds');
 // seedPosts();
-
 // require routes
 const index = require('./routes/index');
 const posts = require('./routes/posts');
@@ -105,7 +104,7 @@ app.use(function(req, res, next) {
 app.use('/', index);
 app.use('/posts', posts);
 app.use('/posts/:id/reviews', reviews);
-
+console.log('just a test');
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     const err = new Error('Not Found');
